@@ -12,14 +12,6 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-        conditional_layers {
-            compatible = "zmk,conditional-layers";
-            middle_layer {
-                if-layers = <2 1>;
-                then-layer = <3>;
-            };
-        };
-        
         default_layer {
             //  ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
             //  | TAB           | Q             | W             | E             | R             | T             |   | Y             | U             | I             | O             | P             | BSPC          |
@@ -93,6 +85,14 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &mo 1   &trans    &trans  &mo 2   &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        middle_layer {
+            if-layers = <2 1>;
+            then-layer = <3>;
         };
     };
 };
