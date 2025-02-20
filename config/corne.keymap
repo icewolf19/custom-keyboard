@@ -9,6 +9,18 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        hold_g_lctl: hold_g_lctl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HOLD_G_LCTL";
+            bindings = <&kp G>, <&kp LCTRL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -43,10 +55,10 @@
             //                                                  ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0     &kp DEL
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp PG_UP  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &kp PG_DN  &trans
-                                        &kp LALT      &trans        &kp SPACE       &kp RET   &trans    &kp LGUI
+&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &kp N6    &kp N7    &kp N8    &kp N9     &kp N0     &kp DEL
+&trans     &trans  &trans  &trans    &trans  &trans       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp PG_UP  &trans
+&kp LSHFT  &trans  &trans  &trans    &trans  &trans       &trans    &trans    &trans    &trans     &kp PG_DN  &trans
+                           &kp LALT  &trans  &kp SPACE    &kp RET   &trans    &kp LGUI
             >;
         };
 
@@ -71,10 +83,10 @@
 
         middle_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                                          &trans        &trans        &trans            &trans  &trans  &trans
             >;
         };
     };
@@ -83,7 +95,7 @@
         compatible = "zmk,conditional-layers";
 
         middle_layer {
-            if-layers = <1 3>;
+            if-layers = <2 1>;
             then-layer = <3>;
         };
     };
