@@ -24,15 +24,6 @@
         };
     };
 
-    macros {
-        cas: cas {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <>;
-            label = "CAS";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -69,7 +60,7 @@
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp MINUS  &kp EQUAL
 &kp LEFT_ALT  &none             &kp LEFT      &kp UP        &kp DOWN      &kp RIGHT       &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp HOME   &kp PAGE_UP
-&trans        &kp LEFT_CONTROL  &none         &none         &none         &none           &none         &none         &trans        &trans        &kp END    &kp PAGE_DOWN
+&trans        &kp LEFT_CONTROL  &none         &none         &none         &none           &none         &none         &none         &none         &kp END    &kp PAGE_DOWN
                                               &trans        &trans        &trans          &trans        &trans        &trans
             >;
         };
@@ -86,7 +77,7 @@
         middle_layer {
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4       &bt BT_CLR_ALL    &none   &none                 &none   &none   &none  &none
-&out OUT_BLE  &out OUT_USB  &none         &none         &kp C_VOLUME_UP    &kp C_MUTE        &none   &kp C_BRIGHTNESS_INC  &none   &trans  &none  &none
+&out OUT_BLE  &out OUT_USB  &none         &none         &kp C_VOLUME_UP    &kp C_MUTE        &none   &kp C_BRIGHTNESS_INC  &none   &none  &none  &none
 &none         &none         &none         &none         &kp C_VOLUME_DOWN  &none             &none   &kp C_BRIGHTNESS_DEC  &none   &none   &none  &none
                                           &trans        &trans             &trans            &trans  &trans                &trans
             >;
