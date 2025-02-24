@@ -22,7 +22,7 @@
             bindings = <&kp LEFT_GUI>;
             key-positions = <24 35>;;
         };
-    }
+    };
 
     keymap {
         compatible = "zmk,keymap";
