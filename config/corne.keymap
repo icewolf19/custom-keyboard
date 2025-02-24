@@ -27,35 +27,26 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-                // ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮   ╭──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────┬──────────────────╮
-                // | ESCAPE           | Q                | W                | E                | R                | T                |   | Y                | U                | U                | I                | O                | DEL              |
-                     &kp ESCAPE         &kp Q              &kp W              &kp E              &kp R              &kp T                  &kp Y              &kp U              &kp I              &kp O              &kp P              &kp DELETE
-                // ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-                // | TAB              | A                | S                | D                | F                | G                |   | H                | J                | K               | L                 | ;                | BACKSPACE        |
-                     &kp TAB            &kp A              &kp S              &kp D              &kp F              &kp G                  &kp H              &kp J              &kp K              &kp L              &kp SEMI           &kp BACKSPACE
-                // ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-                // | SHIFT            | Z                | X                | C                | V                | B                |   | N                | M                | ,                | .                | PAGE DOWN        | END              |
-                     &kp LEFT_SHIFT     &kp Z              &kp X              &kp C              &kp V              &kp B                  &kp N              &kp M              &kp COMMA          &kp DOT            /&kp FSLH          &kp RIGHT_SHIFT
-                // ╰──────────────────┴──────────────────┴──────────────────┼──────────────────┼──────────────────┼──────────────────┤   ├──────────────────┼──────────────────┼──────────────────┼──────────────────┴──────────────────┴──────────────────╯
-                //                                                          | CONTROL          | MOVE TO LAYER 1  | SPACE            |   | ENTER            | MOVE TO LAYER 2  | ALT              |
-                                                                              &kp LEFT_CONTROL   &mo 1              &kp SPACE              &kp ENTER          &mo 2              &kp RIGHT_ALT
-                //                                                          ╰──────────────────┴──────────────────┴──────────────────╯   ╰──────────────────┴──────────────────┴──────────────────╯
+                &kp ESCAPE      &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y      &kp U  &kp I          &kp O    &kp P     &kp DELETE
+                &kp TAB         &kp A  &kp S  &kp D             &kp F  &kp G        &kp H      &kp J  &kp K          &kp L    &kp SEMI  &kp BACKSPACE
+                &kp LEFT_SHIFT  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N      &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                              &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RIGHT_ALT
             >;
         };
         lower_layer {
             bindings = <
-                &kp MINUS     &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp EQUAL
-                &kp LEFT_ALT  &none             &kp LEFT      &kp UP        &kp DOWN      &kp RIGHT       &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp HOME      &kp PAGE_UP
-                &trans        &kp LEFT_CONTROL  &none         &none         &none         &none           &none         &none         &none         &none         &kp END       &kp PAGE_DOWN
-                                                              &trans        &trans        &trans          &trans        &trans        &trans
+                &trans   &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9  &kp NUMBER_0  &trans
+                &trans   &none             &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT       &kp LEFT      &kp DOWN       &kp UP         &kp RIGHT     &kp HOME      &trans
+                &trans   &kp EXCLAMATION   &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT     &kp CARET     &kp AMPERSAND  &kkp ASTERISK  &none         &kp END       &trans
+                                                         &trans        &trans        &trans          &trans        &trans         &trans
             >;
         };
         raise_layer {
             bindings = <
-                &kp F11  &kp F1           &kp F2         &kp F3            &kp F4      &kp F5         &kp F6             &kp F7             &kp F8                 &kp F9           &kp F10   &kp F12
-                &trans   &kp EXCLAMATION  &kp AT_SIGN    &kp HASH          &kp DOLLAR  &kp PERCENT    &kp DOUBLE_QUOTES  &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp BSLH  &trans
-                &trans   &kp CARET        &kp LESS_THAN  &kp GREATER_THAN  &kp TILDE   &kp GRAVE      &kp SINGLE_QUOTE   &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp FSLH  &trans
-                                                         &trans            &trans      &trans         &trans             &trans             &trans
+                &kp F11  &kp F1  &kp F2            &kp F3     &kp F4     &kp F5            &kp F6             &kp F7                 &kp F8             &kp F9           &kp F10   &kp F12
+                &trans   &none   &kp LESS_THAN     &kp PLUS   &kp TILDE  &kp UNDERSCORE    &kp DOUBLE_QUOTES  &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp BSLH  &trans
+                &trans   &none   &kp GREATER_THAN  &kp EQUAL  &kp GRAVE  &kp MINUS         &kp SINGLE_QUOTE   &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp FSLH  &trans
+                                                   &trans     &trans     &trans            &trans             &trans                 &trans
             >;
         };
         middle_layer {
