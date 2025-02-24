@@ -20,7 +20,8 @@
 
         windows {
             bindings = <&kp LEFT_GUI>;
-            key-positions = <24 35>;
+            key-positions = <24 35>;;
+        }
     };
 
     keymap {
