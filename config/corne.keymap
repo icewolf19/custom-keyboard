@@ -33,7 +33,6 @@
         mac_ctrl {
             bindings = <&kp LCTRL>;
             key-positions = <24 35>;
-            layers = <4>;
         };
     };
 
@@ -69,37 +68,10 @@
 
         middle_layer {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL    &to 0   &to 4         &none   &none  &none  &none
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL    &none   &none         &none   &none  &none  &none
 &out OUT_BLE  &out OUT_USB  &none         &none         &kp C_VOL_UP  &kp C_MUTE        &none   &kp C_BRI_UP  &none   &none  &none  &none
 &none         &none         &none         &none         &kp C_VOL_DN  &none             &none   &kp C_BRI_DN  &none   &none  &none  &none
                                           &trans        &trans        &trans            &trans  &trans        &trans
-            >;
-        };
-
-        macos_default {
-            bindings = <
-&kp ESC    &kp Q        &kp W        &kp E        &kp R        &kp T                  &kp Y            &kp U  &mt RS(RA(I)) I  &kp O    &kp P     &kp DEL
-&kp TAB    &kp A        &kp S        &kp D        &kp F        &kp G                  &kp H            &kp J  &kp K            &kp L    &kp SEMI  &kp BSPC
-&kp LSHFT  &mt LG(Z) Z  &mt LG(X) X  &mt LG(C) C  &mt LG(V) V  &mt LG(B) B            &mt RS(RG(N)) N  &kp M  &kp COMMA        &kp DOT  &kp FSLH  &kp RSHFT
-                                     &kp LALT     &mo 5        &mt LG(SPACE) SPACE    &kp ENTER        &mo 6  &kp RCMD
-            >;
-        };
-
-        macos_lower {
-            bindings = <
-&kp GRAVE  &kp N1    &kp N2     &kp N3     &kp N4     &kp N5     &kp PRCNT  &kp DLLR  &kp HASH  &kp AT    &kp EXCL   &trans
-&kp TILDE  &kp N6    &kp N7     &kp N8     &kp N9     &kp N0     &kp LPAR   &kp RPAR  &kp STAR  &kp AMPS  &kp CARET  &trans
-&trans     &kp PLUS  &kp EQUAL  &kp UNDER  &kp MINUS  &kp SQT    &kp LBKT   &kp RBKT  &kp LBRC  &kp RBRC  &kp BSLH   &trans
-                                &trans     &trans     &trans     &trans     &trans    &trans
-            >;
-        };
-
-        macos_raise {
-            bindings = <
-&kp F11  &kp F1  &mt LC(F2) F2  &kp F3  &kp F4  &kp F5     &kp HOME        &kp END   &none         &none      &kp PG_UP  &trans
-&kp F12  &kp F6  &kp F7         &kp F8  &kp F9  &kp F10    &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp PG_DN  &trans
-&trans   &none   &none          &none   &none   &none      &none           &none     &none         &none      &kp PSCRN  &trans
-                                &trans  &trans  &trans     &trans          &trans    &trans
             >;
         };
     };
@@ -113,7 +85,7 @@
         };
 
         macos_switch {
-            if-layers = <5 6>;
+            if-layers = <4 4>;
             then-layer = <3>;
         };
     };
