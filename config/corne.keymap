@@ -30,6 +30,12 @@
             key-positions = <24 35>;
             layers = <0>;
         };
+
+        toggle_gaming {
+            bindings = <&tog 4>;
+            key-positions = <0 11>;
+            layers = <0 4>;
+        };
     };
 
     keymap {
@@ -64,7 +70,7 @@
 
         middle_layer {
             bindings = <
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none     &tog 4  &none   &none   &none  &none  &none
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none     &none   &none   &none   &none  &none  &none
 &bt BT_CLR_ALL  &none         &none         &none         &none         &none     &none   &none   &none   &none  &none  &none
 &none           &none         &none         &none         &none         &none     &none   &none   &none   &none  &none  &none
                                             &trans        &trans        &trans    &trans  &trans  &trans
