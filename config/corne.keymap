@@ -37,9 +37,9 @@
 
         window_default {
             bindings = <
-&kp ESC    &kp Q        &kp W        &kp E        &mt LC(R) R  &mt LC(T) T       &kp Y           &kp U  &kp I      &kp O    &kp P     &kp DEL
-&kp TAB    &mt LC(A) A  &mt LC(S) S  &kp D        &mt LC(F) F  &kp G             &kp H           &kp J  &kp K      &kp L    &kp SEMI  &kp BSPC
-&kp LSHFT  &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V  &mt LCMD B        &mt RCTRL N     &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&kp ESC    &kp Q        &kp W        &kp E        &mt LC(R) R  &mt LC(T) T       &kp Y           &kp U  &mt RS(RA(I)) I  &kp O    &kp P     &kp DEL
+&kp TAB    &mt LC(A) A  &mt LC(S) S  &kp D        &mt LC(F) F  &kp G             &kp H           &kp J  &kp K            &kp L    &kp SEMI  &kp BSPC
+&kp LSHFT  &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C  &mt LC(V) V  &mt LCMD B        &mt RCTRL N     &kp M  &kp COMMA        &kp DOT  &kp FSLH  &kp RSHFT
                                      &kp LCTRL    &mo 1        &mt LALT SPACE    &mt RALT ENTER  &mo 2  &kp RCTRL
             >;
         };
